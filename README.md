@@ -120,3 +120,22 @@ Follow the steps below to get the project up and running on your local machine:
 1. Clone the repository: `git clone [repository URL]`
 2. Install dependencies: `npm install` or `yarn install`
 3. Run the application: `npm start` or `yarn start`
+
+
+
+## Landing Page Sections
+
+- Heading and stats
+- Menus
+- Featured project and Recommended for you
+- Forward funds
+- Fresh favorites
+- Hot of the press
+- Taking off
+- INTERVIEWS FROM THE CREATIVE INDEPENDENT
+- NEAR YOU
+- THE MAKING OF
+- HOME STRETCH
+- CREATORS' CORNER
+
+-Footer
