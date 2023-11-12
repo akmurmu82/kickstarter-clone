@@ -139,3 +139,7 @@ Follow the steps below to get the project up and running on your local machine:
 - CREATORS' CORNER
 
 -Footer
+
+**Pending**
+Margin after the search icon
+opacity of searchBox
