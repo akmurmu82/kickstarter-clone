@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import NavStyles from "./Navbar.module.css";
 import { CloseIcon, SearchIcon } from "@chakra-ui/icons";
