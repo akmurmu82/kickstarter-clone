@@ -1,6 +1,6 @@
 /* Navbar */
 .navContainer {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #dcdedd;
   height: 65px;
   display: flex;
   justify-content: space-between;
