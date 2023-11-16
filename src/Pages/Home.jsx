@@ -1,7 +1,11 @@
 import { Box, Center, Divider, Heading, Image, Text } from "@chakra-ui/react";
 import Navbar from "../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
-import {FeaturedProjects, RecommendedCardBody} from "../components/PageComponents/FeaturedProjects";
+import {
+  FeaturedProjects,
+  RecommendedCardBody,
+} from "../components/PageComponents/FeaturedProjects";
+import SlidingCards from "../components/PageComponents/SlidingCards";
 
 export default function Home() {
   return (
@@ -9,22 +13,39 @@ export default function Home() {
       <Navbar />
       <Menus />
       <PageHeading />
-      <PageContent/>
+      <PageContent />
+      <SlidingCards/>
     </>
   );
 }
 
 const PageContent = () => {
-  return(
-    <Box border='1px solid red' display='flex'  alignItems='flex-start' className="featuredProjects-and-recommended">
-      <FeaturedProjects title='some title' imgLink='some link'/>
-      <Divider orientation="vertical" h='500px' m='0 30px'/>
-      <RecommendedCardBody/>
-    </Box>
-  )
+  return (
+    <>
+      <Box
+        // border="1px solid red"
+        display="flex"
+        alignItems="flex-start"
+        className="featuredProjects-and-recommended"
+      >
+        <FeaturedProjects title="some title" imgLink="some link" />
+        <Divider orientation="vertical" h="500px" />
+        <RecommendedCardBody />
+      </Box>
+      <Divider orientation="horizontal" width="90vd" />
+    </>
+  );
 };
 
 function PageHeading() {
+  function Stats({ num, title }) {
+    return (
+      <Box width="33%">
+        <Text fontSize="3vw">{num}</Text>
+        <Text fontSize="20px">{title}</Text>
+      </Box>
+    );
+  }
   return (
     <Box>
       <Box
@@ -64,15 +85,6 @@ function PageHeading() {
         <Divider orientation="vertical" height="100px" />
         <Stats num="91,725,946" title="pledges" />
       </Center>
-    </Box>
-  );
-}
-
-function Stats({ num, title }) {
-  return (
-    <Box width="33%">
-      <Text fontSize="3vw">{num}</Text>
-      <Text fontSize="20px">{title}</Text>
     </Box>
   );
 }

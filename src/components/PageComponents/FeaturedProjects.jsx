@@ -1,5 +1,5 @@
 import { Card, Image, CardBody, IconButton } from "@chakra-ui/react";
-import { Box, Divider, HStack, Heading, Stack, Text } from "@chakra-ui/layout";
+import { Box, Divider, HStack, Stack, Text } from "@chakra-ui/layout";
 import { useEffect, useState } from "react";
 
 export function FeaturedProjects({ imgLink, title, desc }) {
@@ -26,7 +26,7 @@ export function FeaturedProjects({ imgLink, title, desc }) {
   return (
     <Box
       className="featured-projects"
-      p="20px"
+      p="20px 50px"
       style={{ width: "60%"}}
     >
       {featuredProjects.map((itemObj) => {
@@ -49,7 +49,7 @@ export function FeaturedProjects({ imgLink, title, desc }) {
 
 export const RecommendedCardBody = () => {
   return (
-    <Box width="50%" p='0 20px'>
+    <Box width="50%" p='0 50px'>
       <RecommendedCard />
       <Divider />
       <RecommendedCard />
@@ -77,7 +77,7 @@ const RecommendedCard = () => {
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
       variant="unstyled"
-      p="20px"
+      p="20px 0"
       // border='1px solid blue'
     >
       <Image
