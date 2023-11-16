@@ -6,6 +6,7 @@ import {
   RecommendedCardBody,
 } from "../components/PageComponents/FeaturedProjects";
 import SlidingCards from "../components/PageComponents/SlidingCards";
+import NonSlidingCards from "../components/PageComponents/NonSlidingCards";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <Menus />
       <PageHeading />
       <PageContent />
-      <SlidingCards/>
+      <SlidingCards heading='FRESH FAVORITES'/>
+      <NonSlidingCards heading='HOT OF THE PRESS'/>
     </>
   );
 }
