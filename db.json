@@ -1,0 +1,18 @@
+{
+  "home-page": [{
+      "image": "https://ksr-ugc.imgix.net/assets/042/862/057/879f8b387a1c128211c3048d5f00a78c_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1698479701&auto=format&frame=1&q=92&s=27d31d8742bb3f542f8a88a6db2e3e00",
+      "title": "Anthem to Humankind",
+      "desc": "Hungry Minds’ new book follows the sole survivor of Earth's catastrophic explosion as he documents everything he can remember about humanity",
+      "auther": "By Hungry Minds"
+    }]
+  ,
+  "posts": [
+    { "id": 1, "title": "Post 1" },
+    { "id": 2, "title": "Post 2" },
+    { "id": 3, "title": "Post 3" }
+  ],
+  "comments": [
+    { "id": 1, "body": "Comment 1" },
+    { "id": 2, "body": "Comment 2" }
+  ]
+}
