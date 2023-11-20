@@ -8,7 +8,7 @@ export function FeaturedProjects({ imgLink, title, desc }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/home-page");
+        const response = await fetch("http://localhost:3000/home-page");
         const result = await response.json();
         setFeaturedProjects(result);
       } catch (error) {
