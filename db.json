@@ -1,18 +1,36 @@
 {
-  "home-page": [{
-      "image": "https://ksr-ugc.imgix.net/assets/042/862/057/879f8b387a1c128211c3048d5f00a78c_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1698479701&auto=format&frame=1&q=92&s=27d31d8742bb3f542f8a88a6db2e3e00",
-      "title": "Anthem to Humankind",
-      "desc": "Hungry Minds’ new book follows the sole survivor of Earth's catastrophic explosion as he documents everything he can remember about humanity",
-      "auther": "By Hungry Minds"
-    }]
-  ,
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
+  "home-page": [
+    {
+      "image": "https://ksr-ugc.imgix.net/assets/042/974/297/a8aa0ca924872a8387ea6794fee7adee_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1699349657&auto=format&frame=1&q=92&s=facb5e085573f1b02569d4de4e934dc3",
+      "title": "ZimaCube - Personal cloud. Re-invented.",
+      "desc": "Up to 164TB | 6x HDD | 4x SSD | PCIe Gen4 | 4x 2.5GbE | 12th Gen i5 | Thunderbolt 4 | Private GPT",
+      "auther": "By IceWhale Technology"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "Comment 1" },
-    { "id": 2, "body": "Comment 2" }
+  "hot-of-the-press": [
+    {
+      "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/07/KSR_H1-Product-Review-KPU-preview.jpg",
+      "imgAlt": "ImgLogo",
+      "title": "Here Are All the Ways We’ve Improved Kickstarter for Creators So Far in 2023",
+      "desc": "Our mid-year progress report breaks down all the work we’ve done this year to help our creators succeed."
+    },
+    {
+      "imgSrc": "https://ksr-static.imgix.net/sindy_and_everette-8e729ee.jpg?ixlib=rb-4.0.2&s=b84ebd5bf2285c648008ec32f5775c96",
+      "imgAlt": "ImgLogo",
+      "title": "Sindy Wilson Steps in as Kickstarter’s New Chief Financial Officer",
+      "desc": "Sindy joins our executive team, bringing extensive experience and strategic financial guidance to support Kickstarter’s growth."
+    },
+    {
+      "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/06/ksr-advisorycouncil_June21_2500x1500-KPU.jpg",
+      "imgAlt": "ImgLogo",
+      "title": "Building a Stronger Kickstarter Community: Reflections on the Inaugural Community Advisory Council",
+      "desc": "A year of honest feedback and meaningful alignment on the future of Kickstarter."
+    },
+    {
+      "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/05/Social_Media_Landscape.jpg",
+      "imgAlt": "ImgLogo",
+      "title": "Tools and Advice for Promoting Your Kickstarter Campaign on Social Media",
+      "desc": "A Kickstarter social media specialist shares tips on building a strategic approach to getting the word out about your project."
+    }
   ]
 }

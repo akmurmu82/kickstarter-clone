@@ -1,0 +1,12 @@
+.nonSlidingCards {
+    padding: 20px 50px;
+    /* border: '1px solid red' */
+}
+.NonSlidingCardsBody{
+    width: 100vd;
+    display: flex;
+    border: 1px solid blue;
+    align-items: flex-end;
+    /* grid-template-columns: repeat(4, 1fr); */
+    column-gap: 30px;
+}
