@@ -1,9 +1,11 @@
 import { Card, Image, CardBody, IconButton } from "@chakra-ui/react";
-import { Box, Divider, HStack, Stack, Text } from "@chakra-ui/layout";
+import { Box, Divider, HStack, Flex, Stack, Text } from "@chakra-ui/layout";
 import { useEffect, useState } from "react";
+import { useTheme } from "@emotion/react";
 
-export function FeaturedProjects({ imgLink, title, desc }) {
+export function FeaturedProjects() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
+  const theme = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,21 +28,39 @@ export function FeaturedProjects({ imgLink, title, desc }) {
   return (
     <Box
       className="featured-projects"
-      p="20px 50px"
-      style={{ width: "60%"}}
+      position="relative"
+      zIndex="2"
+      pr="60px"
+      w="60%"
     >
       {featuredProjects.map((itemObj) => {
         return (
-          <>
+          <Flex
+            direction="column"
+            color={theme.color.greyShade}
+            alignItems="flex-start"
+            _hover={{ cursor: "pointer" }}
+          >
+            <Text as="b" mb="20px">
+              FEATURE PROJECTS
+            </Text>
             <Box className="featured-projects-img">
-              <img src={itemObj.image} alt='some Img' />
+              <img src={itemObj.image} alt="some Img" />
             </Box>
-            <Box textAlign='left' className="featured-projects-text">
-            <Text fontSize='30px'>{itemObj.title}</Text>
-              <Text fontSize='17px' m='10px 0'>{itemObj.desc}</Text>
-              <Text fontSize='14px' mt='10px'>{itemObj.auther}</Text>
+            <Box
+              textAlign="left"
+              color="black"
+              className="featured-projects-text"
+            >
+              <Text fontSize="30px">{itemObj.title}</Text>
+              <Text fontSize="18px" m="10px 0">
+                {itemObj.desc}
+              </Text>
+              <Text fontSize="14px" mt="10px">
+                {itemObj.auther}
+              </Text>
             </Box>
-          </>
+          </Flex>
         );
       })}
     </Box>
@@ -48,15 +68,16 @@ export function FeaturedProjects({ imgLink, title, desc }) {
 }
 
 export const RecommendedCardBody = () => {
+  const theme = useTheme();
   return (
-    <Box width="50%" p='0 50px'>
+    <Flex direction="column" alignItems="flex-start" width="50%" pl="60px">
+      <Text color={theme.color.greyShade} as="b" mb="20px">
+        RECOMMENDED FOR YOU
+      </Text>
       <RecommendedCard />
-      <Divider />
       <RecommendedCard />
-      <Divider />
       <RecommendedCard />
-      <Divider />
-    </Box>
+    </Flex>
   );
 };
 
@@ -73,32 +94,36 @@ const RecommendedCard = () => {
     );
   }
   return (
-    <Card
-      direction={{ base: "column", sm: "row" }}
-      overflow="hidden"
-      variant="unstyled"
-      p="20px 0"
-      // border='1px solid blue'
-    >
-      <Image
-        objectFit="cover"
-        maxW={{ base: "100%", sm: "150px" }}
-        src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-        alt="Caffe Latte"
-      />
+    <>
+      <Card
+        direction={{ base: "column", sm: "row" }}
+        variant="unstyled"
+        // border="1px solid"
+        // pb="20px"
+      >
+        <Image
+          objectFit="cover"
+          maxW={{ base: "100%", sm: "150px" }}
+          src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+          alt="Caffe Latte"
+          _hover={{ cursor: "pointer" }}
+        />
 
-      <Stack>
-        <CardBody textAlign="left" padding="0 10px" lineHeight="0.5">
-          <Text py="2">The perfect latte</Text>
-          <Text py="2">4000% funded</Text>
-          <Text py="2">By auther</Text>
-          <HStack>
-            <Icon icon="bookmark" />
-            <Icon icon="thumbs-up" />
-            <Icon icon="thumbs-down" />
-          </HStack>
-        </CardBody>
-      </Stack>
-    </Card>
+        <Stack>
+          <CardBody textAlign="left" padding="0 10px" lineHeight="0.5">
+            <Text py="2">The perfect latte</Text>
+            <Text py="2">4000% funded</Text>
+            <Text py="2">By auther</Text>
+            <HStack>
+              <Icon icon="bookmark" />
+              <Icon icon="thumbs-up" />
+              <Icon icon="thumbs-down" />
+            </HStack>
+          </CardBody>
+        </Stack>
+      </Card>
+
+      <Divider m="20px 0" />
+    </>
   );
 };
