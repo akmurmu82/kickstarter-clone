@@ -2,28 +2,15 @@ import {
   Box,
   Card,
   CardBody,
-  Divider,
   HStack,
-  Heading,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
-import Styles from './NonSlidingCards.module.css'
 
 export default function NonSlidingCards({ heading }) {
-  return (
-    <Box className={Styles.nonSlidingCards}>
-      <HStack justifyContent="space-between">
-        <Text>{heading}</Text>
-      </HStack>
-      <NonSlidingCardsBody />
-    </Box>
-  );
-}
-
-function NonSlidingCardsBody() {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
@@ -33,44 +20,81 @@ function NonSlidingCardsBody() {
     }
     getData();
   }, []);
-  useEffect(() => {
-    console.log(data);
-  });
+
   return (
-    <HStack className={Styles.NonSlidingCardsBody}>
-      {data.map((card) => (
-        <StaticCard imgSrc={card.imgSrc} title={card.title} desc={card.desc} />
-      ))}
-    </HStack>
+    <Box w="90%" m="auto">
+      <HStack justifyContent="space-between">
+        <Text as="b" fontSize="13px" m="20px 0">
+          {heading}
+        </Text>
+      </HStack>
+      <HStack
+        alignItems="flex-start"
+        display="grid"
+        gridTemplateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+      >
+        {data.map((card) => (
+          <StaticCard
+            imgSrc={card.imgSrc}
+            title={card.title}
+            desc={card.desc}
+          />
+        ))}
+      </HStack>
+    </Box>
   );
 }
 
 function StaticCard({ imgSrc, title, desc }) {
+  const theme = useTheme();
   return (
     <Card
-      w="25%"
+      // w="25%"
       borderRadius="0"
       variant="unstyled"
-      border="1px solid green"
-      >
+      // border="1px solid green"
+      _hover={{
+        cursor: "pointer",
+        "& .cardTitle": {
+          color: theme.color.greenShade,
+          textDecoration: "underline",
+        },
+        "& .icons": { opacity: "1" },
+      }}
+    >
       <CardBody>
-        <Box h='360px' overflow='hidden'>
+        <Box h="360px" overflow="hidden">
           <Image
             src={imgSrc}
             alt="Green double couch with wooden legs"
-            objectFit='cover'
-            h='120%'
+            objectFit="cover"
+            h="130%"
           />
         </Box>
         <Stack mt="6" textAlign="left" spacing="3">
-          <Heading size="md">{title}</Heading>
-          <Text>{desc}</Text>
-          <Text color="blue.600" fontSize="sm">
+          <Text lineHeight="1" className="cardTitle" fontSize="lg">
+            {title}
+          </Text>
+          <Text
+            lineHeight="1.2"
+            _hover={{ cursor: "pointer", textDecoration: "underline" }}
+            fontSize="15px"
+          >
+            {desc}
+          </Text>
+          <Text
+            _hover={{ cursor: "pointer", textDecoration: "underline" }}
+            color="blue.600"
+            fontSize="sm"
+          >
             Read more...
           </Text>
         </Stack>
       </CardBody>
-      <Divider />
     </Card>
   );
 }

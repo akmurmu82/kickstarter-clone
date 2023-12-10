@@ -1,6 +1,7 @@
 {
   "home-page": [
     {
+      "id": 1,
       "image": "https://ksr-ugc.imgix.net/assets/042/974/297/a8aa0ca924872a8387ea6794fee7adee_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1699349657&auto=format&frame=1&q=92&s=facb5e085573f1b02569d4de4e934dc3",
       "title": "ZimaCube - Personal cloud. Re-invented.",
       "desc": "Up to 164TB | 6x HDD | 4x SSD | PCIe Gen4 | 4x 2.5GbE | 12th Gen i5 | Thunderbolt 4 | Private GPT",
@@ -9,28 +10,83 @@
   ],
   "hot-of-the-press": [
     {
+      "id": 1,
       "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/07/KSR_H1-Product-Review-KPU-preview.jpg",
       "imgAlt": "ImgLogo",
       "title": "Here Are All the Ways We’ve Improved Kickstarter for Creators So Far in 2023",
       "desc": "Our mid-year progress report breaks down all the work we’ve done this year to help our creators succeed."
     },
     {
+      "id": 2,
       "imgSrc": "https://ksr-static.imgix.net/sindy_and_everette-8e729ee.jpg?ixlib=rb-4.0.2&s=b84ebd5bf2285c648008ec32f5775c96",
       "imgAlt": "ImgLogo",
       "title": "Sindy Wilson Steps in as Kickstarter’s New Chief Financial Officer",
       "desc": "Sindy joins our executive team, bringing extensive experience and strategic financial guidance to support Kickstarter’s growth."
     },
     {
+      "id": 3,
       "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/06/ksr-advisorycouncil_June21_2500x1500-KPU.jpg",
       "imgAlt": "ImgLogo",
       "title": "Building a Stronger Kickstarter Community: Reflections on the Inaugural Community Advisory Council",
       "desc": "A year of honest feedback and meaningful alignment on the future of Kickstarter."
     },
     {
+      "id": 4,
       "imgSrc": "https://updates.kickstarter.com/content/images/size/w800/2023/05/Social_Media_Landscape.jpg",
       "imgAlt": "ImgLogo",
       "title": "Tools and Advice for Promoting Your Kickstarter Campaign on Social Media",
       "desc": "A Kickstarter social media specialist shares tips on building a strategic approach to getting the word out about your project."
+    }
+  ],
+  "fresh-favorites": [
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/040/820/738/0aed1124228174610d129fc928986d95_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1683144735&auto=format&frame=1&q=92&s=4fb7a92334f5ccccc00cc4f4c3047a02",
+      "imgAlt": "Wounds of Ash Audiobook",
+      "title": "Wounds of Ash Audiobook",
+      "desc": "Love Epic Fantasy? Help me fund the audiobook format of my NA Fantasy novel Wounds of Ash!",
+      "author": "By KL Hester"
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/043/239/101/8fa8ee50fa2af35d37559e36c6430f3d_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1701358683&auto=format&frame=1&q=92&s=20bf5dc52e9f6e33853d31b95378b199",
+      "imgAlt": "SHI #1 3OTH ANNIVERSARY ORIGINAL ART EDITION!",
+      "title": "SHI #1 3OTH ANNIVERSARY ORIGINAL ART EDITION!",
+      "desc": "For The First Time Ever, The Masterwork That Launched The 'Bad Girl' Revolution Returns In This 112-Page Original Art Edition!",
+      "author": "By Billy Tucci and Crusade Fine Arts, Ltd."
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/043/230/736/2cb51186cbc6bdf160776a30b8518f6f_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1701294288&auto=format&frame=1&q=92&s=a78f9ee7afa452146507983390cae7e3",
+      "imgAlt": "Van Helsing: Vampire Hunter Issue #1",
+      "title": "Van Helsing: Vampire Hunter Issue #1",
+      "desc": "Grab your stakes, vampire hunters—and prepare for a pulse-pounding new hunt in the Liesel Van Helsing saga!",
+      "author": "By Zenescope Comics"
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/043/290/175/5f51b448e0628a1b1b0a5bbfed38d130_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1701795217&auto=format&frame=1&q=92&s=9ca689b0ea03b78996337c312165a51d",
+      "imgAlt": "Noodles, Drinks, World Peace: Recipes from Noodle Nirvana",
+      "title": "Noodles, Drinks, World Peace: Recipes from Noodle Nirvana",
+      "desc": "Food and drink recipes from Noodle Nirvana, a socially conscious build-your-own noodle shop once located in the Appalachian foothills.",
+      "author": "By Mae Suramek"
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/040/820/738/0aed1124228174610d129fc928986d95_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1683144735&auto=format&frame=1&q=92&s=4fb7a92334f5ccccc00cc4f4c3047a02",
+      "imgAlt": "Wounds of Ash Audiobook",
+      "title": "Wounds of Ash Audiobook",
+      "desc": "Love Epic Fantasy? Help me fund the audiobook format of my NA Fantasy novel Wounds of Ash!",
+      "author": "By KL Hester"
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/040/820/738/0aed1124228174610d129fc928986d95_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1683144735&auto=format&frame=1&q=92&s=4fb7a92334f5ccccc00cc4f4c3047a02",
+      "imgAlt": "Wounds of Ash Audiobook",
+      "title": "Wounds of Ash Audiobook",
+      "desc": "Love Epic Fantasy? Help me fund the audiobook format of my NA Fantasy novel Wounds of Ash!",
+      "author": "By KL Hester"
+    },
+    {
+      "imgSrc": "https://ksr-ugc.imgix.net/assets/040/820/738/0aed1124228174610d129fc928986d95_original.jpg?ixlib=rb-4.1.0&crop=faces&w=352&h=198&fit=crop&v=1683144735&auto=format&frame=1&q=92&s=4fb7a92334f5ccccc00cc4f4c3047a02",
+      "imgAlt": "Wounds of Ash Audiobook",
+      "title": "Wounds of Ash Audiobook",
+      "desc": "Love Epic Fantasy? Help me fund the audiobook format of my NA Fantasy novel Wounds of Ash!",
+      "author": "By KL Hester"
     }
   ]
 }

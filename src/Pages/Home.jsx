@@ -5,18 +5,45 @@ import {
   FeaturedProjects,
   RecommendedCardBody,
 } from "../components/PageComponents/FeaturedProjects";
-import SlidingCards from "../components/PageComponents/SlidingCards";
 import NonSlidingCards from "../components/PageComponents/NonSlidingCards";
+import Carousel from "../components/PageComponents/Carousel";
+import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 export default function Home() {
+  const [featFav, setFeatFav] = useState([]);
+  useEffect(() => {
+    async function getData() {
+      let res = await fetch(`http://localhost:3000/fresh-favorites`);
+      let data = await res.json();
+      setFeatFav(data);
+    }
+    getData();
+  }, []);
+
+  useEffect(() => console.log("featFav", featFav), [featFav]);
   return (
     <Box>
       <Navbar />
       <Menus />
       <PageHeading />
       <PageContent />
-      <SlidingCards heading="FRESH FAVORITES" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="FRESH FAVORITES" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
       <NonSlidingCards heading="HOT OF THE PRESS" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="TAKING OFF" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <NonSlidingCards heading="INTERVIEWS FROM THE CREATIVE INDEPENDENT" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="NEAR YOU" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <NonSlidingCards heading="THE MAKING OF" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="HOME STRETCH" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Footer />
     </Box>
   );
 }
@@ -69,7 +96,7 @@ function PageHeading() {
           width="90%"
           margin="10px auto 20px"
           bg="#fff"
-          p='10px 0'
+          p="10px 0"
           boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px"
         >
           <Stats num="249,092" title="projects funded" />
@@ -99,12 +126,11 @@ const PageContent = () => {
         <Divider orientation="vertical" h="500px" />
         <RecommendedCardBody />
       </Flex>
-      <Divider orientation="horizontal" width="90vd" />
     </>
   );
 };
 
-function Menus() {
+export function Menus() {
   return (
     <Box
       h="60px"
