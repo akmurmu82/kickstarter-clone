@@ -36,13 +36,13 @@ export default function Navbar() {
       </nav>
 
       <Box
-        style={{ display: isHide ? "none" : "flex", opacity: isHide ? 0 : 1}}
+        style={{ display: isHide ? "none" : "flex", opacity: isHide ? 0 : 1 }}
         className={NavStyles.searchBox}
       >
         <input type="text" placeholder="Search for projects or categories" />
         <IconButton
           onClick={toggleSearchBox}
-          variant = 'unstyled'
+          variant="unstyled"
           aria-label="Close button"
           icon={<CloseIcon />}
         />

@@ -6,17 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const theme = extendTheme({
-  color:{
-    greyShade:'#656969'
+  color: {
+    greyShade: "#656969",
+    greenShade: "#037362",
   },
-  font:{
-    primary:"font-family: Roboto, sans-serif"
-  }
-  
+  font: {
+    primary: "font-family: Roboto, sans-serif",
+  },
 });
 
 root.render(

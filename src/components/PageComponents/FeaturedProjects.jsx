@@ -32,10 +32,18 @@ export function FeaturedProjects() {
       zIndex="2"
       pr="60px"
       w="60%"
+      _hover={{
+        cursor: "pointer",
+        "& .featured-projects-text > :first-of-type": {
+          color: theme.color.greenShade,
+          textDecoration: "underline",
+        },
+      }}
     >
       {featuredProjects.map((itemObj) => {
         return (
           <Flex
+            key={itemObj.id}
             direction="column"
             color={theme.color.greyShade}
             alignItems="flex-start"
@@ -100,13 +108,13 @@ const RecommendedCard = () => {
         variant="unstyled"
         // border="1px solid"
         // pb="20px"
+        _hover={{ cursor: "pointer" }}
       >
         <Image
           objectFit="cover"
           maxW={{ base: "100%", sm: "150px" }}
           src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
           alt="Caffe Latte"
-          _hover={{ cursor: "pointer" }}
         />
 
         <Stack>
