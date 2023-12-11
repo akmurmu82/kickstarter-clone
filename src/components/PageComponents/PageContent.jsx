@@ -52,6 +52,7 @@ export const PageContent = ({ pageHeading, featFav }) => {
   );
 };
 
+
 function FeaturedProjects() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const theme = useTheme();
