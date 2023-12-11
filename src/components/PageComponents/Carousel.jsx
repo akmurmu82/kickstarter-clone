@@ -18,6 +18,7 @@ import { useTheme } from "@emotion/react";
 
 export const Carousel = ({ heading, cardArr }) => {
   const sliderRef = useRef(null);
+  const theme = useTheme();
 
   const settings = {
     dots: false,
@@ -58,7 +59,7 @@ export const Carousel = ({ heading, cardArr }) => {
   return (
     <Box w="90%" m="auto">
       <HStack justifyContent="space-between" m="20px 0">
-        <Text as="b" fontSize="13px">
+        <Text color={theme.color.greyShade} as="b" fontSize="13px">
           {heading}
         </Text>
         <Box>
