@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PageContent } from "../components/PageComponents/PageContent";
-import { Box, HStack, Link, Text, VStack } from "@chakra-ui/react";
+import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 
 export default function Arts() {
   const [featFav, setFeatFav] = useState([]);
