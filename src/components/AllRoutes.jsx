@@ -5,9 +5,12 @@ import Arts from "../Pages/Arts";
 export default function AllRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home isHomePage={true}/>}></Route>
-      <Route path="/arts" element={<Arts/>}></Route>
-      <Route path="/comics&illustration" element={<h1>Comics & Illustration</h1>}></Route>
+      <Route path="/" element={<Home isHomePage={true} />}></Route>
+      <Route path="/arts" element={<Arts />}></Route>
+      <Route
+        path="/comics&illustration"
+        element={<h1>Comics & Illustration</h1>}
+      ></Route>
       <Route path="/design&tech" element={<h1>Design & Tech</h1>}></Route>
       <Route path="/film" element={<h1>Film</h1>}></Route>
       <Route path="/food&craft" element={<h1>Food & Craft</h1>}></Route>
