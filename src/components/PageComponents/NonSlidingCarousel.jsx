@@ -10,7 +10,8 @@ import {
 import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
 
-export default function NonSlidingCards({ heading }) {
+export default function NonSlidingCarousel({ heading }) {
+  const theme = useTheme();
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
@@ -24,7 +25,7 @@ export default function NonSlidingCards({ heading }) {
   return (
     <Box w="90%" m="auto">
       <HStack justifyContent="space-between">
-        <Text as="b" fontSize="13px" m="20px 0">
+        <Text color={theme.color.greyShade} as="b" fontSize="13px" m="20px 0">
           {heading}
         </Text>
       </HStack>

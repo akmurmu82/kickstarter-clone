@@ -1,9 +1,58 @@
-import { Card, Image, CardBody, IconButton } from "@chakra-ui/react";
-import { Box, Divider, HStack, Flex, Stack, Text } from "@chakra-ui/layout";
-import { useEffect, useState } from "react";
+import {
+  Box,
+  Card,
+  CardBody,
+  Divider,
+  Flex,
+  HStack,
+  IconButton,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import Carousel from "./Carousel";
+import NonSlidingCarousel from "./NonSlidingCarousel";
 import { useTheme } from "@emotion/react";
+import { useEffect, useState } from "react";
 
-export function FeaturedProjects() {
+export const PageContent = ({ pageHeading, featFav }) => {
+  return (
+    <>
+      {pageHeading}
+      <Flex
+        // borderTop="1px solid red"
+        w="90%"
+        m="auto"
+        position="relative"
+        // top="0"
+        top="-60px"
+        alignItems="flex-start"
+        className="featuredProjects-and-recommended"
+      >
+        <FeaturedProjects />
+        <Divider orientation="vertical" h="500px" />
+        <RecommendedCardBody />
+      </Flex>
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="FRESH FAVORITES" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <NonSlidingCarousel heading="HOT OF THE PRESS" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="TAKING OFF" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <NonSlidingCarousel heading="INTERVIEWS FROM THE CREATIVE INDEPENDENT" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="NEAR YOU" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <NonSlidingCarousel heading="THE MAKING OF" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+      <Carousel cardArr={featFav} heading="HOME STRETCH" />
+      <Divider orientation="horizontal" width="90vd" m="20px 0" />
+    </>
+  );
+};
+
+function FeaturedProjects() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const theme = useTheme();
 
@@ -49,7 +98,7 @@ export function FeaturedProjects() {
             alignItems="flex-start"
             _hover={{ cursor: "pointer" }}
           >
-            <Text as="b" mb="20px">
+            <Text as="b" fontSize="13px" mb="20px">
               FEATURE PROJECTS
             </Text>
             <Box className="featured-projects-img">
@@ -75,11 +124,11 @@ export function FeaturedProjects() {
   );
 }
 
-export const RecommendedCardBody = () => {
+const RecommendedCardBody = () => {
   const theme = useTheme();
   return (
     <Flex direction="column" alignItems="flex-start" width="50%" pl="60px">
-      <Text color={theme.color.greyShade} as="b" mb="20px">
+      <Text color={theme.color.greyShade} as="b" fontSize="13px" mb="20px">
         RECOMMENDED FOR YOU
       </Text>
       <RecommendedCard />

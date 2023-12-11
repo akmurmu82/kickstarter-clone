@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import NavStyles from "./Navbar.module.css";
 import { CloseIcon, SearchIcon } from "@chakra-ui/icons";
-import { Box, IconButton } from "@chakra-ui/react";
+import { Box, Center, IconButton } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   let searchRef = useRef(null);
@@ -34,7 +35,6 @@ export default function Navbar() {
           <Box className={NavStyles.userAuth}>Login</Box>
         </Box>
       </nav>
-
       <Box
         style={{ display: isHide ? "none" : "flex", opacity: isHide ? 0 : 1 }}
         className={NavStyles.searchBox}
@@ -47,6 +47,34 @@ export default function Navbar() {
           icon={<CloseIcon />}
         />
       </Box>
+      <Menus/>
     </>
+  );
+}
+
+export function Menus() {
+  return (
+    <Box
+      h="60px"
+      display="flex"
+      alignItems="center"
+      borderBottom="1px solid #dcdedd"
+    >
+      <Center
+        color="#656969"
+        width="60%"
+        m="auto"
+        justifyContent="space-between"
+      >
+        <Link to="/Arts">Arts</Link>
+        <Link to="/comics&illustration">Comics & Illustration</Link>
+        <Link to="/design&tech">Design & Tech</Link>
+        <Link to="/film">Film</Link>
+        <Link to="/food&craft">Food & Craft</Link>
+        <Link to="/games">Games</Link>
+        <Link to="/music">Music</Link>
+        <Link to="/publishing">Publishing</Link>
+      </Center>
+    </Box>
   );
 }

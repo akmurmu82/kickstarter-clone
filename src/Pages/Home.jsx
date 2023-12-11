@@ -1,14 +1,6 @@
 import { Box, Center, Divider, Flex, Image, Text } from "@chakra-ui/react";
-import Navbar from "../components/Navbar/Navbar";
-import { Link } from "react-router-dom";
-import {
-  FeaturedProjects,
-  RecommendedCardBody,
-} from "../components/PageComponents/FeaturedProjects";
-import NonSlidingCards from "../components/PageComponents/NonSlidingCards";
-import Carousel from "../components/PageComponents/Carousel";
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
+import { PageContent } from "../components/PageComponents/PageContent";
 
 export default function Home() {
   const [featFav, setFeatFav] = useState([]);
@@ -24,26 +16,7 @@ export default function Home() {
   useEffect(() => console.log("featFav", featFav), [featFav]);
   return (
     <Box>
-      <Navbar />
-      <Menus />
-      <PageHeading />
-      <PageContent />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <Carousel cardArr={featFav} heading="FRESH FAVORITES" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <NonSlidingCards heading="HOT OF THE PRESS" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <Carousel cardArr={featFav} heading="TAKING OFF" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <NonSlidingCards heading="INTERVIEWS FROM THE CREATIVE INDEPENDENT" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <Carousel cardArr={featFav} heading="NEAR YOU" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <NonSlidingCards heading="THE MAKING OF" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <Carousel cardArr={featFav} heading="HOME STRETCH" />
-      <Divider orientation="horizontal" width="90vd" m="20px 0" />
-      <Footer />
+      <PageContent pageHeading={<PageHeading />} featFav={featFav} />
     </Box>
   );
 }
@@ -107,52 +80,5 @@ function PageHeading() {
         </Center>
       </Box>
     </Flex>
-  );
-}
-
-const PageContent = () => {
-  return (
-    <>
-      <Flex
-        // borderTop="1px solid red"
-        w="90%"
-        m="auto"
-        position="relative"
-        top="-60px"
-        alignItems="flex-start"
-        className="featuredProjects-and-recommended"
-      >
-        <FeaturedProjects />
-        <Divider orientation="vertical" h="500px" />
-        <RecommendedCardBody />
-      </Flex>
-    </>
-  );
-};
-
-export function Menus() {
-  return (
-    <Box
-      h="60px"
-      display="flex"
-      alignItems="center"
-      borderBottom="1px solid #dcdedd"
-    >
-      <Center
-        color="#656969"
-        width="60%"
-        m="auto"
-        justifyContent="space-between"
-      >
-        <Link to="/Arts">Arts</Link>
-        <Link to="/comics&illustration">Comics & Illustration</Link>
-        <Link to="/design&tech">Design & Tech</Link>
-        <Link to="/film">Film</Link>
-        <Link to="/food&craft">Food & Craft</Link>
-        <Link to="/games">Games</Link>
-        <Link to="/music">Music</Link>
-        <Link to="/publishing">Publishing</Link>
-      </Center>
-    </Box>
   );
 }

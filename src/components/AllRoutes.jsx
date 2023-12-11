@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
+import Home from "../Pages/Home";
+import Arts from "../Pages/Arts";
 
 export default function AllRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<h1>Home</h1>}></Route>
-      <Route path="/arts" element={<h1>Arts</h1>}></Route>
+      <Route path="/" element={<Home isHomePage={true}/>}></Route>
+      <Route path="/arts" element={<Arts/>}></Route>
       <Route path="/comics&illustration" element={<h1>Comics & Illustration</h1>}></Route>
       <Route path="/design&tech" element={<h1>Design & Tech</h1>}></Route>
       <Route path="/film" element={<h1>Film</h1>}></Route>
