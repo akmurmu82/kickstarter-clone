@@ -13,9 +13,10 @@ import { useEffect, useState } from "react";
 export default function NonSlidingCarousel({ heading }) {
   const theme = useTheme();
   const [data, setData] = useState([]);
+  const baseAPI = `https://657bf12b394ca9e4af15098b.mockapi.io/`
   useEffect(() => {
     async function getData() {
-      const response = await fetch("http://localhost:3000/hot-of-the-press");
+      const response = await fetch(`${baseAPI}/hot-of-the-press`);
       const data = await response.json();
       setData(data);
     }

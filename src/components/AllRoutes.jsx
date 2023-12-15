@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import Arts from "../Pages/Arts";
+import ComicsIllustration from "../Pages/Comics&Illustration";
+import DesignTech from "../Pages/Design&Tech";
+import Film from "../Pages/Film";
 
 export default function AllRoutes() {
   return (
@@ -9,10 +12,10 @@ export default function AllRoutes() {
       <Route path="/arts" element={<Arts />}></Route>
       <Route
         path="/comics&illustration"
-        element={<h1>Comics & Illustration</h1>}
+        element={<ComicsIllustration/>}
       ></Route>
-      <Route path="/design&tech" element={<h1>Design & Tech</h1>}></Route>
-      <Route path="/film" element={<h1>Film</h1>}></Route>
+      <Route path="/design&tech" element={<DesignTech/>}></Route>
+      <Route path="/film" element={<Film/>}></Route>
       <Route path="/food&craft" element={<h1>Food & Craft</h1>}></Route>
       <Route path="/games" element={<h1>Games</h1>}></Route>
       <Route path="/music" element={<h1>Music</h1>}></Route>

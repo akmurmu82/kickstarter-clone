@@ -4,9 +4,10 @@ import { PageContent } from "../components/PageComponents/PageContent";
 
 export default function Home() {
   const [featFav, setFeatFav] = useState([]);
+  const baseAPI = `https://657bf12b394ca9e4af15098b.mockapi.io/`;
   useEffect(() => {
     async function getData() {
-      let res = await fetch(`http://localhost:3000/fresh-favorites`);
+      let res = await fetch(`${baseAPI}fresh-favorites`);
       let data = await res.json();
       setFeatFav(data);
     }
