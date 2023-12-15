@@ -2,7 +2,7 @@ import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { PageContent } from "../components/PageComponents/PageContent";
 
-function ComicsIllustration() {
+function Film() {
   const [featFav, setFeatFav] = useState([]);
   useEffect(() => {
     async function getData() {
@@ -12,12 +12,12 @@ function ComicsIllustration() {
     }
     getData();
   }, []);
-  return <PageContent pageHeading={<ComicPageHeading />} featFav={featFav} />;
+  return <PageContent pageHeading={<FilmPageHeading />} featFav={featFav} />;
 }
 
-export default ComicsIllustration;
+export default Film;
 
-function ComicPageHeading() {
+function FilmPageHeading() {
   return (
     <VStack
       spacing="10px"
@@ -27,14 +27,13 @@ function ComicPageHeading() {
       mb="60px"
       p="50px 0"
     >
-      <Text fontSize="3xl">Comics & Illustration</Text>
+      <Text fontSize="3xl">Film</Text>
       <Text>
-        Explore fantastical worlds and original characters from Kickstarter’s
-        community of comics creators and illustrators.
+        Join forces with the intrepid filmmakers and festival creators changing
+        the way stories get told on screen.
       </Text>
       <HStack color="blue.500" spacing="20px">
-        <Link>Explore Comics</Link>
-        <Link>Explore Illustration</Link>
+        <Link>Explore Film & Video</Link>
       </HStack>
     </VStack>
   );
